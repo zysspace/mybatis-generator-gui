@@ -154,7 +154,10 @@ public class MybatisGeneratorBridge {
         mapperConfig.setTargetProject(generatorConfig.getProjectFolder() + "/" + generatorConfig.getMappingXMLTargetFolder());
         // DAO
         JavaClientGeneratorConfiguration daoConfig = new JavaClientGeneratorConfiguration();
-        daoConfig.setConfigurationType("ANNOTATEDMAPPER");
+	//注解形式sql
+        //daoConfig.setConfigurationType("ANNOTATEDMAPPER");
+	//xml形式sql
+	daoConfig.setConfigurationType("XMLMAPPER");
         daoConfig.setTargetPackage(generatorConfig.getDaoPackage());
         daoConfig.setTargetProject(generatorConfig.getProjectFolder() + "/" + generatorConfig.getDaoTargetFolder());
 
